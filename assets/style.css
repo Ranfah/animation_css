@@ -130,26 +130,24 @@ h1{
     align-items: center;
     
 }
-.lettre1_{
-    animation: h1Animation 0.5s 1s reverse both ;
+h1 span{
+    position: relative;
 }
-.lettre2_{
-    animation: h1Animation 1s 1s reverse both ;
+h1 span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(237, 162, 242);
+    border-left: solid 2px black;
+    animation: typing 1.5s steps(10) infinite;
 }
-.lettre3_{
-    animation: h1Animation 1.5s 1s reverse both ;
-}
-.lettre4_{
-    animation: h1Animation 2s 1s reverse both ;
-}
-.lettre5_{
-    animation: h1Animation 2.5s 1s reverse both ;
-}
-.lettre6_{
-    animation: h1Animation 3s 1s reverse both ;
-}
-.lettre7_{
-    animation: h1Animation 3.5s 1s reverse both ;
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0px -20px 0 20px;
+    }
 }
 @keyframes h1Animation{
     to{
@@ -219,7 +217,14 @@ h1{
        margin: 20px 10px 20px 10px;
        width: auto;
     }
-    .content_5,.content_6{
+    .content_5{
+        margin: 20px 10px 20px 10px;
+        padding: 10px 20px 10px 40px;
+        align-items: center;
+        justify-content: start;
+        width: auto;
+    }
+    .content_6{
         margin: 20px 10px 20px 10px;
         padding: 10px 20px 10px 20px;
         align-items: center;
@@ -248,7 +253,6 @@ h1{
         justify-content: center;
         width: auto;
     }
-
 }
 @media only screen and (min-width:768px){
     .container{
@@ -315,10 +319,8 @@ h1{
      }
      h3{
         align-items: end;
-        font-size: 25px;
+        font-size: 30px;
         background: rgb(224, 137, 248);
-        border-radius: 20px;
-        padding-right: 20px;
     }
     .box{
         z-index: 1;
